@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chat Setup — Chat With Strangers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="setup-page">
+  <div class="setup-container">
+    <h1 class="title">Get Started</h1>
+    <p class="subtitle">Enter your details to join the fun!</p>
+
+    <form class="setup-form" action="chatroom.html" method="GET" id="setupForm">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Type your name" required maxlength="30">
+
+      <label>Gender</label>
+      <div class="gender-options" role="radiogroup" aria-label="Gender">
+        <label><input type="radio" name="gender" value="male" required> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+        <label><input type="radio" name="gender" value="other"> Other</label>
+        <label><input type="radio" name="gender" value="prefer-not"> Prefer not</label>
+      </div>
+
+      <button type="submit" class="start-btn">Start Chatting</button>
+    </form>
+  </div>
+</body>
+</html>

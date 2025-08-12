@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chat Room — Chat With Strangers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="chatroom-body">
+  <div class="chat-container" role="application" aria-label="Chat with a stranger">
+
+    <!-- Header -->
+    <header class="chat-header">
+      <div class="left-header">
+        <div class="user-info">
+          <div class="user-name" id="youName">You</div>
+          <div class="user-meta" id="youMeta">—</div>
+        </div>
+      </div>
+
+      <div class="center-header">
+        <div class="chat-title">Chat Room</div>
+      </div>
+
+      <div class="right-header">
+        <div class="user-info partner">
+          <div class="user-name" id="partnerName">Searching...</div>
+          <div class="user-meta" id="partnerMeta">—</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Messages -->
+    <main class="chat-messages" id="messages" aria-live="polite"></main>
+
+    <!-- Input area -->
+    <form id="msgForm" class="chat-input-form" autocomplete="off" aria-label="Send message">
+      <button id="actionBtn" type="button" class="chat-btn next-btn" aria-label="Next partner">Next</button>
+      <input id="msgInput" type="text" placeholder="Type a message..." aria-label="Message input" autocomplete="off" required />
+      <button type="submit" class="chat-btn send-btn" aria-label="Send message">Send</button>
+    </form>
+
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="chatroom.js"></script>
+</body>
+</html>
